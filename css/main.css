@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap");
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Nunito Sans', sans-serif;
+  min-width: 900px;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1.5fr;
+      grid-template-columns: 1fr 1fr 1.5fr;
+  -ms-grid-rows: 1fr 4fr 3fr 2fr;
+      grid-template-rows: 1fr 4fr 3fr 2fr;
+  height: 100vh;
+  min-width: 900px;
+}
+
+#logo {
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 80px;
+  position: absolute;
+  margin: -135px 6px;
+}
+
+main.background {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1/1/3/3;
+  /* row starts/column starts/row ends/column ends */
+  background-image: url(../img/happy-coffee-blur.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding: 10em 2em 0 2em;
+}
+
+main > h1 {
+  font-weight: 600;
+  font-size: 58px;
+  font-family: 'Playfair Display', sans-serif;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+main > p {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+  z-index: 4;
+}
+
+section.arabica {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 3/1/4/2;
+  /* row starts/column starts/row ends/column ends */
+  background-image: url(../img/arabica.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  width: 100%;
+}
+
+section.arabica .innera {
+  height: 100%;
+  z-index: 1;
+  background: #ec801a;
+  padding: 1em;
+  text-align: center;
+  -webkit-clip-path: circle(20% at 100% 0%);
+          clip-path: circle(20% at 100% 0%);
+  -webkit-transition: -webkit-clip-path .5s ease-in-out;
+  transition: -webkit-clip-path .5s ease-in-out;
+  transition: clip-path .5s ease-in-out;
+  transition: clip-path .5s ease-in-out, -webkit-clip-path .5s ease-in-out;
+}
+
+section.arabica .innera h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin: .6em auto 0 auto;
+}
+
+section.arabica .innera p {
+  text-align: center;
+  margin: 2em auto;
+  font-size: .8rem;
+}
+
+section.arabica .innera a.info {
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: .6rem;
+  padding: .3rem .5rem;
+  border: solid white .15rem;
+  border-radius: 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section.arabica .innera a.info:hover {
+  color: #773a00;
+  font-size: .8rem;
+  border: none;
+}
+
+section.arabica:hover .innera {
+  -webkit-clip-path: circle(75%);
+          clip-path: circle(75%);
+}
+
+section.robusta {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 3/2/4/3;
+  background-image: url(../img/robusta.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  width: 100%;
+}
+
+section.robusta .innerr {
+  height: 100%;
+  z-index: 1;
+  background: #3595bb;
+  padding: 1em;
+  text-align: center;
+  -webkit-clip-path: circle(20% at 0% 0%);
+          clip-path: circle(20% at 0% 0%);
+  -webkit-transition: -webkit-clip-path .5s ease-in-out;
+  transition: -webkit-clip-path .5s ease-in-out;
+  transition: clip-path .5s ease-in-out;
+  transition: clip-path .5s ease-in-out, -webkit-clip-path .5s ease-in-out;
+}
+
+section.robusta .innerr h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin: .6em auto 0 auto;
+}
+
+section.robusta .innerr p {
+  text-align: center;
+  margin: 2em auto;
+  font-size: .8rem;
+}
+
+section.robusta .innerr a.info {
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: .6rem;
+  padding: .3rem .5rem;
+  border: solid white .15rem;
+  border-radius: 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section.robusta .innerr a.info:hover {
+  color: #00485a;
+  font-size: .8rem;
+  border: none;
+}
+
+section.robusta:hover .innerr {
+  -webkit-clip-path: circle(75%);
+          clip-path: circle(75%);
+}
+
+div.banner {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 2/3/5/4;
+  margin-top: 0;
+  background-image: url(../img/find-us-banner-blur.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.banner > a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  font-family: 'Nunito sans', sans-serif;
+  font-weight: 800;
+  color: white;
+  font-size: 2.5rem;
+  padding: 4px 0;
+  text-align: center;
+  font-style: italic;
+  margin: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+div > a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+div > a:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+div > a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+footer {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 4/1/5/3;
+  background: #182733;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer > a {
+  color: #fff;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer > a:hover {
+  color: #dadada;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer > img {
+  width: 28px;
+  height: 44px;
+  margin: 14px;
+}
+/*# sourceMappingURL=main.css.map */
